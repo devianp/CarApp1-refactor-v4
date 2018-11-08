@@ -3,10 +3,10 @@ import UIKit
 
 class GenerationCarouselCell: UICollectionViewCell  {
 
-    var carCategory: GenerationSet? {
+    var carCategory: [Generation] = [] {
         didSet {
             //            self.nameLabel.text = self.carCategory?.name
-            self.pageControl.numberOfPages = self.carCategory?.cars.count ?? 0
+            self.pageControl.numberOfPages = self.carCategory.count
         }
     }
 

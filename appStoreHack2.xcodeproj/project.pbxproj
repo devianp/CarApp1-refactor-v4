@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A73DC51C21948E00000C8F3B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51B21948E00000C8F3B /* BaseCell.swift */; };
-		A73DC51E21948E43000C8F3B /* ModelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51D21948E43000C8F3B /* ModelSet.swift */; };
+		A73DC52021949771000C8F3B /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51F21949771000C8F3B /* Specification.swift */; };
+		A73DC5222194977C000C8F3B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC5212194977C000C8F3B /* Version.swift */; };
+		A73DC52421949786000C8F3B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC52321949786000C8F3B /* Model.swift */; };
 		A7C5F6331F7D30D500810EB8 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6321F7D30D500810EB8 /* ModelView.swift */; };
 		A7C5F6371F7D311200810EB8 /* GenerationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */; };
 		A7C5F6391F7D317600810EB8 /* TopCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6381F7D317600810EB8 /* TopCarCell.swift */; };
@@ -18,15 +20,15 @@
 		D7AF78761EC6623C003384EC /* FeaturedCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF78751EC6623C003384EC /* FeaturedCarsViewController.swift */; };
 		D7AF787B1EC6623D003384EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AF787A1EC6623D003384EC /* Assets.xcassets */; };
 		D7AF787E1EC6623D003384EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF787C1EC6623D003384EC /* LaunchScreen.storyboard */; };
-		D7AF78881ECA3DC7003384EC /* GenerationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF78871ECA3DC7003384EC /* GenerationSet.swift */; };
 		D7C2C6DB1ECCE924001761BC /* GenerationCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */; };
 		D7F6728E218F3832004C393D /* ScreenshotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6728D218F3832004C393D /* ScreenshotCell.swift */; };
-		D7F67290218F56A9004C393D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6728F218F56A9004C393D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A73DC51B21948E00000C8F3B /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
-		A73DC51D21948E43000C8F3B /* ModelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSet.swift; sourceTree = "<group>"; };
+		A73DC51F21949771000C8F3B /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
+		A73DC5212194977C000C8F3B /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		A73DC52321949786000C8F3B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A7C5F6321F7D30D500810EB8 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationListCell.swift; sourceTree = "<group>"; };
 		A7C5F6381F7D317600810EB8 /* TopCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCarCell.swift; sourceTree = "<group>"; };
@@ -38,10 +40,8 @@
 		D7AF787A1EC6623D003384EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7AF787D1EC6623D003384EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7AF787F1EC6623D003384EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7AF78871ECA3DC7003384EC /* GenerationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationSet.swift; sourceTree = "<group>"; };
 		D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationCarouselCell.swift; sourceTree = "<group>"; };
 		D7F6728D218F3832004C393D /* ScreenshotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCell.swift; sourceTree = "<group>"; };
-		D7F6728F218F56A9004C393D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +64,13 @@
 				A7C5F63C1F7D31CE00810EB8 /* Generation.swift */,
 				D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */,
 				A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */,
-				D7AF78871ECA3DC7003384EC /* GenerationSet.swift */,
-				D7F6728F218F56A9004C393D /* Model.swift */,
-				A73DC51D21948E43000C8F3B /* ModelSet.swift */,
+				A73DC52321949786000C8F3B /* Model.swift */,
 				A7C5F6321F7D30D500810EB8 /* ModelView.swift */,
 				D710D9951ED1FBE700A71E25 /* ModelViewController.swift */,
 				D7F6728D218F3832004C393D /* ScreenshotCell.swift */,
+				A73DC51F21949771000C8F3B /* Specification.swift */,
 				A7C5F6381F7D317600810EB8 /* TopCarCell.swift */,
+				A73DC5212194977C000C8F3B /* Version.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -181,12 +181,12 @@
 				D7F6728E218F3832004C393D /* ScreenshotCell.swift in Sources */,
 				A73DC51C21948E00000C8F3B /* BaseCell.swift in Sources */,
 				D7C2C6DB1ECCE924001761BC /* GenerationCarouselCell.swift in Sources */,
-				D7F67290218F56A9004C393D /* Model.swift in Sources */,
+				A73DC52421949786000C8F3B /* Model.swift in Sources */,
+				A73DC52021949771000C8F3B /* Specification.swift in Sources */,
 				A7C5F63D1F7D31CE00810EB8 /* Generation.swift in Sources */,
 				D710D9961ED1FBE700A71E25 /* ModelViewController.swift in Sources */,
 				A7C5F6371F7D311200810EB8 /* GenerationListCell.swift in Sources */,
-				D7AF78881ECA3DC7003384EC /* GenerationSet.swift in Sources */,
-				A73DC51E21948E43000C8F3B /* ModelSet.swift in Sources */,
+				A73DC5222194977C000C8F3B /* Version.swift in Sources */,
 				A7C5F6391F7D317600810EB8 /* TopCarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

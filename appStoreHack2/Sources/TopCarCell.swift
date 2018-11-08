@@ -6,7 +6,7 @@ class TopCarCell: UICollectionViewCell {
 
     var car: Generation? {
         didSet {
-            self.imageView.image = (self.car?.imageName).flatMap { UIImage(named: $0) }
+            self.imageView.image = UIImage(named: "2")
             self.nameLabel.text = self.car?.name
         }
     }

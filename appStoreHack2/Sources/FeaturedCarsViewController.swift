@@ -3,7 +3,7 @@ import UIKit
 
 class FeaturedCarsViewController: UICollectionViewController {
 
-    private var carCategories: [GenerationSet] = GenerationSet.sampleCarCategories {
+    private var carCategories: [Generation] = Generation.generations {
         didSet {
             self.collectionView?.reloadData()
         }
@@ -56,7 +56,7 @@ extension FeaturedCarsViewController: UICollectionViewDelegateFlowLayout {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         if collectionView == self.collectionView {
-            return self.carCategories.count
+            return 2
         }
         else if collectionView == carsCollectionView {
             return 1
@@ -70,11 +70,11 @@ extension FeaturedCarsViewController: UICollectionViewDelegateFlowLayout {
             case 0:
                 return 1
             default:
-                return self.carCategories[section].cars.count
+                return self.carCategories.count
             }
         }
         else if collectionView == carsCollectionView {
-            return self.carCategories[section].cars.count
+            return self.carCategories.count
         }
         fatalError()
     }
@@ -84,7 +84,7 @@ extension FeaturedCarsViewController: UICollectionViewDelegateFlowLayout {
             switch indexPath.section {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GenerationCarouselCell.self), for: indexPath) as! GenerationCarouselCell
-                cell.carCategory = carCategories[indexPath.section]
+                cell.carCategory = carCategories
 
                 self.carsCollectionView = cell.carsCollectionView
                 self.carsPageControl = cell.pageControl
@@ -92,20 +92,20 @@ extension FeaturedCarsViewController: UICollectionViewDelegateFlowLayout {
                 return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GenerationListCell.self), for: indexPath) as! GenerationListCell
-                cell.car = self.carCategories[indexPath.section].cars[indexPath.item]
+                cell.car = self.carCategories[indexPath.item]
                 return cell
             }
         }
         else if collectionView == carsCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TopCarCell.self), for: indexPath) as! TopCarCell
-            cell.car = self.carCategories[indexPath.section].cars[indexPath.item]
+            cell.car = self.carCategories[indexPath.item]
             return cell
         }
         fatalError()
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let car = self.carCategories[indexPath.section].cars[indexPath.item]
+        let car = self.carCategories[indexPath.item]
         let viewController = ModelViewController(car: car)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
