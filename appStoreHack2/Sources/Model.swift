@@ -34,3 +34,9 @@ extension Model {
         return Model.models.first(where: { $0.name == name })!
     }
 }
+
+extension Model {
+    var versions: [Version] {
+        return Version.versions.filter({ $0.model.name == self.name })
+    }
+}

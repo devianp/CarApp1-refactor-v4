@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class GenerationsCarouselCell: UICollectionViewCell  {
+final class CarouselView: UIView {
 
     let collectionView: UICollectionView
     let pageControl: UIPageControl
@@ -25,21 +25,21 @@ final class GenerationsCarouselCell: UICollectionViewCell  {
 
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor(white: 240.0 / 255.0, alpha: 1.0)
+        self.backgroundColor = .clear
 
-        self.contentView.addSubview(self.collectionView)
-        self.contentView.addSubview(self.pageControl)
+        self.addSubview(self.collectionView)
+        self.addSubview(self.pageControl)
 
         NSLayoutConstraint.activate([
 
-            self.collectionView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            self.collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             self.collectionView.bottomAnchor.constraint(equalTo: self.pageControl.topAnchor),
-            self.collectionView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            self.collectionView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            self.collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 
-            self.pageControl.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            self.pageControl.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            self.pageControl.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+            self.pageControl.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.pageControl.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.pageControl.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             ])
     }
 

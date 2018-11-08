@@ -1,15 +1,13 @@
 
 import UIKit
 
-final class ModelViewController: UICollectionViewController {
+final class ModelViewController: UITableViewController {
 
     private let generation: Generation
-    private let versions: [Version]
 
     init(generation: Generation) {
         self.generation = generation
-        self.versions = Version.versions.filter({ $0.model.generation.name == generation.name })
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        super.init(style: .grouped)
         self.title = self.generation.name
     }
 
@@ -22,42 +20,28 @@ extension ModelViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView?.backgroundColor = .white
-        self.collectionView?.register(ModelHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: ModelHeaderView.self))
-        self.collectionView?.register(NameCell.self, forCellWithReuseIdentifier: String(describing: NameCell.self))
+        
+        self.tableView.register(DefaultTableViewCell.self, forCellReuseIdentifier: "DefaultTableViewCell")
     }
 }
 
-extension ModelViewController { // UICollectionViewDataSource
+extension ModelViewController { // UITableViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return self.generation.models.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.versions.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.generation.models[section].versions.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: NameCell.self), for: indexPath) as! NameCell
-        cell.name = self.versions[indexPath.item].name
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultTableViewCell", for: indexPath) as! DefaultTableViewCell
+        cell.textLabel!.text = self.generation.models[indexPath.section].versions[indexPath.row].name
         return cell
     }
-}
 
-extension ModelViewController: UICollectionViewDelegateFlowLayout {
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 60.0)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 200.0)
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: ModelHeaderView.self), for: indexPath) as! ModelHeaderView
-        header.generation = self.generation
-        return header
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.generation.models[section].name
     }
 }

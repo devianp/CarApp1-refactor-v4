@@ -22,3 +22,9 @@ extension Generation {
         return Generation.generations.first(where: { $0.name == name })!
     }
 }
+
+extension Generation {
+    var models: [Model] {
+        return Model.models.filter({ $0.generation.name == self.name })
+    }
+}

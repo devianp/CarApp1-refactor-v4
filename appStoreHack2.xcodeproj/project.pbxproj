@@ -10,6 +10,10 @@
 		A73DC52021949771000C8F3B /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51F21949771000C8F3B /* Specification.swift */; };
 		A73DC5222194977C000C8F3B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC5212194977C000C8F3B /* Version.swift */; };
 		A73DC52421949786000C8F3B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC52321949786000C8F3B /* Model.swift */; };
+		A78F5D9D2194B5DE0017E728 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F5D9C2194B5DE0017E728 /* DefaultTableViewCell.swift */; };
+		A78F5D9F2194B6EC0017E728 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F5D9E2194B6EC0017E728 /* CarouselViewController.swift */; };
+		A78F5DA12194B7140017E728 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F5DA02194B7140017E728 /* CarouselView.swift */; };
+		A78F5DA32194BA480017E728 /* CarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78F5DA22194BA480017E728 /* CarouselViewCell.swift */; };
 		A7C5F6331F7D30D500810EB8 /* ModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */; };
 		A7C5F6371F7D311200810EB8 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6361F7D311200810EB8 /* NameCell.swift */; };
 		A7C5F6391F7D317600810EB8 /* GenerationImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6381F7D317600810EB8 /* GenerationImageCell.swift */; };
@@ -19,13 +23,16 @@
 		D7AF78761EC6623C003384EC /* GenerationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF78751EC6623C003384EC /* GenerationsViewController.swift */; };
 		D7AF787B1EC6623D003384EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7AF787A1EC6623D003384EC /* Assets.xcassets */; };
 		D7AF787E1EC6623D003384EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7AF787C1EC6623D003384EC /* LaunchScreen.storyboard */; };
-		D7C2C6DB1ECCE924001761BC /* GenerationsCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2C6DA1ECCE924001761BC /* GenerationsCarouselCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A73DC51F21949771000C8F3B /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
 		A73DC5212194977C000C8F3B /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		A73DC52321949786000C8F3B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A78F5D9C2194B5DE0017E728 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		A78F5D9E2194B6EC0017E728 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		A78F5DA02194B7140017E728 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		A78F5DA22194BA480017E728 /* CarouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewCell.swift; sourceTree = "<group>"; };
 		A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHeaderView.swift; sourceTree = "<group>"; };
 		A7C5F6361F7D311200810EB8 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
 		A7C5F6381F7D317600810EB8 /* GenerationImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationImageCell.swift; sourceTree = "<group>"; };
@@ -37,7 +44,6 @@
 		D7AF787A1EC6623D003384EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7AF787D1EC6623D003384EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7AF787F1EC6623D003384EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7C2C6DA1ECCE924001761BC /* GenerationsCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsCarouselCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +61,17 @@
 			isa = PBXGroup;
 			children = (
 				D7AF78731EC6623C003384EC /* ApplicationDelegate.swift */,
+				A78F5DA02194B7140017E728 /* CarouselView.swift */,
+				A78F5DA22194BA480017E728 /* CarouselViewCell.swift */,
+				A78F5D9E2194B6EC0017E728 /* CarouselViewController.swift */,
+				A78F5D9C2194B5DE0017E728 /* DefaultTableViewCell.swift */,
 				A7C5F63C1F7D31CE00810EB8 /* Generation.swift */,
 				A7C5F6381F7D317600810EB8 /* GenerationImageCell.swift */,
-				A7C5F6361F7D311200810EB8 /* NameCell.swift */,
-				D7C2C6DA1ECCE924001761BC /* GenerationsCarouselCell.swift */,
 				D7AF78751EC6623C003384EC /* GenerationsViewController.swift */,
 				A73DC52321949786000C8F3B /* Model.swift */,
 				A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */,
 				D710D9951ED1FBE700A71E25 /* ModelViewController.swift */,
+				A7C5F6361F7D311200810EB8 /* NameCell.swift */,
 				A73DC51F21949771000C8F3B /* Specification.swift */,
 				A73DC5212194977C000C8F3B /* Version.swift */,
 			);
@@ -170,12 +179,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7AF78761EC6623C003384EC /* GenerationsViewController.swift in Sources */,
+				A78F5D9D2194B5DE0017E728 /* DefaultTableViewCell.swift in Sources */,
+				A78F5D9F2194B6EC0017E728 /* CarouselViewController.swift in Sources */,
 				A7C5F6331F7D30D500810EB8 /* ModelHeaderView.swift in Sources */,
+				A78F5DA12194B7140017E728 /* CarouselView.swift in Sources */,
 				D7AF78741EC6623C003384EC /* ApplicationDelegate.swift in Sources */,
-				D7C2C6DB1ECCE924001761BC /* GenerationsCarouselCell.swift in Sources */,
 				A73DC52421949786000C8F3B /* Model.swift in Sources */,
 				A73DC52021949771000C8F3B /* Specification.swift in Sources */,
 				A7C5F63D1F7D31CE00810EB8 /* Generation.swift in Sources */,
+				A78F5DA32194BA480017E728 /* CarouselViewCell.swift in Sources */,
 				D710D9961ED1FBE700A71E25 /* ModelViewController.swift in Sources */,
 				A7C5F6371F7D311200810EB8 /* NameCell.swift in Sources */,
 				A73DC5222194977C000C8F3B /* Version.swift in Sources */,
