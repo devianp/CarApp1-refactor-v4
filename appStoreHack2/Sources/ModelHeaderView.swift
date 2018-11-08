@@ -1,14 +1,12 @@
 
 import UIKit
 
-class ModelView: UICollectionReusableView {
+final class ModelHeaderView: UICollectionReusableView {
 
-    // name label should be UI Text View to fit in all of summary
-
-    var car: Generation? {
+    var generation: Generation? {
         didSet {
             self.imageView.image = UIImage(named: "2")
-            self.nameLabel.text = self.car?.summary
+            self.nameLabel.text = self.generation?.summary
         }
     }
 
@@ -16,6 +14,7 @@ class ModelView: UICollectionReusableView {
     private let nameLabel: UILabel
 
     override init(frame: CGRect) {
+
         self.imageView = UIImageView(frame: .zero)
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.contentMode = .scaleAspectFill
@@ -24,7 +23,7 @@ class ModelView: UICollectionReusableView {
         self.nameLabel = UILabel(frame: .zero)
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel.font = .preferredFont(forTextStyle: .body)
-        self.nameLabel.backgroundColor = .yellow
+        self.nameLabel.numberOfLines = 0
 
         super.init(frame: frame)
 
@@ -32,6 +31,7 @@ class ModelView: UICollectionReusableView {
         self.addSubview(self.nameLabel)
 
         NSLayoutConstraint.activate([
+
             self.imageView.topAnchor.constraint(equalTo: self.topAnchor),
             self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -43,7 +43,7 @@ class ModelView: UICollectionReusableView {
             ])
     }
 
-    required init?(coder decoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError()
     }
 }

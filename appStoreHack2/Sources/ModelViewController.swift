@@ -1,60 +1,63 @@
 
 import UIKit
 
-class ModelViewController: UICollectionViewController {
+final class ModelViewController: UICollectionViewController {
 
-    private let car: Generation
-    //1
-    private let cellId = "cellId"
-    //1
+    private let generation: Generation
+    private let versions: [Version]
 
-    init(car: Generation) {
-        self.car = car
+    init(generation: Generation) {
+        self.generation = generation
+        self.versions = Version.versions.filter({ $0.model.generation.name == generation.name })
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
-        self.title = self.car.name
+        self.title = self.generation.name
     }
 
     required init?(coder decoder: NSCoder) {
         fatalError()
     }
+}
+
+extension ModelViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = .white
-        self.collectionView?.alwaysBounceVertical = true
-        self.collectionView?.register(ModelView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: ModelView.self))
-        //3
-        self.collectionView?.register(SreenshotCell2.self, forCellWithReuseIdentifier: cellId)
-        //3
+        self.collectionView?.register(ModelHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: ModelHeaderView.self))
+        self.collectionView?.register(NameCell.self, forCellWithReuseIdentifier: String(describing: NameCell.self))
     }
-    //2
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-    }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+}
+
+extension ModelViewController { // UICollectionViewDataSource
+
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    //2
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 200)
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.versions.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: NameCell.self), for: indexPath) as! NameCell
+        cell.name = self.versions[indexPath.item].name
+        return cell
     }
 }
 
 extension ModelViewController: UICollectionViewDelegateFlowLayout {
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 60.0)
+    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if section == 0 {
-            return CGSize(width: view.frame.width, height: 200)
-        }
-        return .zero
+        return CGSize(width: collectionView.frame.width, height: 200.0)
     }
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if indexPath.section == 0 {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: ModelView.self), for: indexPath) as! ModelView
-            header.car = car
-            return header
-        }
-        fatalError()
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: ModelHeaderView.self), for: indexPath) as! ModelHeaderView
+        header.generation = self.generation
+        return header
     }
 }

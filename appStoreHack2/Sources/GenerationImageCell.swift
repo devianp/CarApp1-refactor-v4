@@ -1,13 +1,12 @@
 
 import UIKit
 
-class TopCarCell: UICollectionViewCell {
-    // car and genereation cell (used in top generation cell)
+final class GenerationImageCell: UICollectionViewCell {
 
-    var car: Generation? {
+    var generation: Generation? {
         didSet {
             self.imageView.image = UIImage(named: "2")
-            self.nameLabel.text = self.car?.name
+            self.nameLabel.text = self.generation?.name
         }
     }
 
@@ -15,6 +14,7 @@ class TopCarCell: UICollectionViewCell {
     private let nameLabel: UILabel
 
     override init(frame: CGRect) {
+
         self.imageView = UIImageView(frame: .zero)
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.contentMode = .scaleAspectFill
@@ -31,6 +31,7 @@ class TopCarCell: UICollectionViewCell {
         self.contentView.addSubview(self.nameLabel)
 
         NSLayoutConstraint.activate([
+
             self.imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             self.imageView.bottomAnchor.constraint(equalTo: self.nameLabel.topAnchor),
             self.imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
@@ -43,7 +44,7 @@ class TopCarCell: UICollectionViewCell {
             ])
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError()
     }
 }

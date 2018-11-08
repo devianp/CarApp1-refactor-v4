@@ -1,24 +1,26 @@
 
 import UIKit
 
-class GenerationListCell: UICollectionViewCell {
+final class NameCell: UICollectionViewCell {
 
-    var car: Generation? {
+    var name: String? {
         didSet {
-            self.nameLabel.text = self.car?.name
+            self.nameLabel.text = self.name
         }
     }
 
     private let nameLabel: UILabel
 
     override init(frame: CGRect) {
+
         self.nameLabel = UILabel(frame: .zero)
         self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
         self.nameLabel.font = .preferredFont(forTextStyle: .body)
 
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor(white: 0.9, alpha: 0.4)
+        self.backgroundColor = .white
+
         self.contentView.addSubview(self.nameLabel)
 
         NSLayoutConstraint.activate([
