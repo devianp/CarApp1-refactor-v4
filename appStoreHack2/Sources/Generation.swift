@@ -5,14 +5,3 @@ struct Generation {
     let imageName: String
     let summary: String
 }
-
-
-
-
-
-
-
-
-
-
-

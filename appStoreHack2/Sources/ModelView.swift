@@ -4,7 +4,7 @@ import UIKit
 class ModelView: UICollectionReusableView {
 
     // name label should be UI Text View to fit in all of summary
-    
+
     var car: Generation? {
         didSet {
             self.imageView.image = (self.car?.imageName).flatMap { UIImage(named: $0) }

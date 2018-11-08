@@ -1,9 +1,3 @@
-struct Model {
-    let modelId: String
-    let modelGeneration: String
-    let model: String
-    let version: String
-}
 
 struct ModelSet {
     let ModelGeneration: String
@@ -16,7 +10,7 @@ extension ModelSet {
         return [
             ModelSet(ModelGeneration: "911 F (1965-1973)", ModelSubset: "901 (1964)", ModelVersions: [
                 Model(modelId: "1", modelGeneration: "911 F (1965-1973)", model: "901 (1964)", version: "901 (1964)")]),
-            
+
             ModelSet(ModelGeneration: "911 F (1965-1973)", ModelSubset: "911 (1964-1973)", ModelVersions: [
                 Model(modelId: "2", modelGeneration: "911 F (1965-1973)", model: "911 (1964-1973)", version: "911 2.0 (1965-67)"),
                 Model(modelId: "3", modelGeneration: "911 F (1965-1973)", model: "911 (1964-1973)", version: "911 2.0 Targa (1967)"),
@@ -32,7 +26,7 @@ extension ModelSet {
                 Model(modelId: "13", modelGeneration: "911 F (1965-1973)", model: "911 (1964-1973)", version: "911 E 2.4, 911 E 2.4 Targa (1972-73)"),
                 Model(modelId: "14", modelGeneration: "911 F (1965-1973)", model: "911 (1964-1973)", version: "911 S 2.4, 911 S 2.4 Targa (1972-73)")
                 ]),
-            
+
             ModelSet(ModelGeneration: "911 F (1965-1973)", ModelSubset: "912 (1965-1969)", ModelVersions: [
                 Model(modelId: "15", modelGeneration: "911 F (1965-1973)", model: "912 (1965-1969)", version: "912 1.6 (1965-69)"),
                 Model(modelId: "16", modelGeneration: "911 F (1965-1973)", model: "912 (1965-1969)", version: "912 1.6 Targa (1967-69)")
@@ -40,5 +34,3 @@ extension ModelSet {
         ]
     }
 }
-
-

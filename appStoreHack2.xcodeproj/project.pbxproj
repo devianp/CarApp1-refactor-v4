@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A73DC51C21948E00000C8F3B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51B21948E00000C8F3B /* BaseCell.swift */; };
+		A73DC51E21948E43000C8F3B /* ModelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51D21948E43000C8F3B /* ModelSet.swift */; };
 		A7C5F6331F7D30D500810EB8 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6321F7D30D500810EB8 /* ModelView.swift */; };
 		A7C5F6371F7D311200810EB8 /* GenerationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */; };
 		A7C5F6391F7D317600810EB8 /* TopCarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6381F7D317600810EB8 /* TopCarCell.swift */; };
@@ -19,10 +21,12 @@
 		D7AF78881ECA3DC7003384EC /* GenerationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF78871ECA3DC7003384EC /* GenerationSet.swift */; };
 		D7C2C6DB1ECCE924001761BC /* GenerationCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */; };
 		D7F6728E218F3832004C393D /* ScreenshotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6728D218F3832004C393D /* ScreenshotCell.swift */; };
-		D7F67290218F56A9004C393D /* modelSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6728F218F56A9004C393D /* modelSet.swift */; };
+		D7F67290218F56A9004C393D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F6728F218F56A9004C393D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A73DC51B21948E00000C8F3B /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		A73DC51D21948E43000C8F3B /* ModelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSet.swift; sourceTree = "<group>"; };
 		A7C5F6321F7D30D500810EB8 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationListCell.swift; sourceTree = "<group>"; };
 		A7C5F6381F7D317600810EB8 /* TopCarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCarCell.swift; sourceTree = "<group>"; };
@@ -37,7 +41,7 @@
 		D7AF78871ECA3DC7003384EC /* GenerationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationSet.swift; sourceTree = "<group>"; };
 		D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationCarouselCell.swift; sourceTree = "<group>"; };
 		D7F6728D218F3832004C393D /* ScreenshotCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCell.swift; sourceTree = "<group>"; };
-		D7F6728F218F56A9004C393D /* modelSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelSet.swift; sourceTree = "<group>"; };
+		D7F6728F218F56A9004C393D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,16 +59,18 @@
 			isa = PBXGroup;
 			children = (
 				D7AF78731EC6623C003384EC /* AppDelegate.swift */,
+				A73DC51B21948E00000C8F3B /* BaseCell.swift */,
 				D7AF78751EC6623C003384EC /* FeaturedCarsViewController.swift */,
 				A7C5F63C1F7D31CE00810EB8 /* Generation.swift */,
 				D7C2C6DA1ECCE924001761BC /* GenerationCarouselCell.swift */,
 				A7C5F6361F7D311200810EB8 /* GenerationListCell.swift */,
 				D7AF78871ECA3DC7003384EC /* GenerationSet.swift */,
-				D7F6728F218F56A9004C393D /* modelSet.swift */,
+				D7F6728F218F56A9004C393D /* Model.swift */,
+				A73DC51D21948E43000C8F3B /* ModelSet.swift */,
 				A7C5F6321F7D30D500810EB8 /* ModelView.swift */,
 				D710D9951ED1FBE700A71E25 /* ModelViewController.swift */,
-				A7C5F6381F7D317600810EB8 /* TopCarCell.swift */,
 				D7F6728D218F3832004C393D /* ScreenshotCell.swift */,
+				A7C5F6381F7D317600810EB8 /* TopCarCell.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -123,7 +129,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Devian Patel";
 				TargetAttributes = {
 					D7AF786F1EC6623C003384EC = {
@@ -173,12 +179,14 @@
 				A7C5F6331F7D30D500810EB8 /* ModelView.swift in Sources */,
 				D7AF78741EC6623C003384EC /* AppDelegate.swift in Sources */,
 				D7F6728E218F3832004C393D /* ScreenshotCell.swift in Sources */,
+				A73DC51C21948E00000C8F3B /* BaseCell.swift in Sources */,
 				D7C2C6DB1ECCE924001761BC /* GenerationCarouselCell.swift in Sources */,
-				D7F67290218F56A9004C393D /* modelSet.swift in Sources */,
+				D7F67290218F56A9004C393D /* Model.swift in Sources */,
 				A7C5F63D1F7D31CE00810EB8 /* Generation.swift in Sources */,
 				D710D9961ED1FBE700A71E25 /* ModelViewController.swift in Sources */,
 				A7C5F6371F7D311200810EB8 /* GenerationListCell.swift in Sources */,
 				D7AF78881ECA3DC7003384EC /* GenerationSet.swift in Sources */,
+				A73DC51E21948E43000C8F3B /* ModelSet.swift in Sources */,
 				A7C5F6391F7D317600810EB8 /* TopCarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +219,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -218,6 +227,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -225,13 +235,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -244,13 +252,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -268,6 +276,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -275,6 +284,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -282,9 +292,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -295,11 +303,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

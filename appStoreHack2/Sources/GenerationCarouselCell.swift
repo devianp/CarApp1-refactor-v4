@@ -5,7 +5,7 @@ class GenerationCarouselCell: UICollectionViewCell  {
 
     var carCategory: GenerationSet? {
         didSet {
-//            self.nameLabel.text = self.carCategory?.name
+            //            self.nameLabel.text = self.carCategory?.name
             self.pageControl.numberOfPages = self.carCategory?.cars.count ?? 0
         }
     }
@@ -59,7 +59,7 @@ class GenerationCarouselCell: UICollectionViewCell  {
             self.pageControl.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
             ])
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }

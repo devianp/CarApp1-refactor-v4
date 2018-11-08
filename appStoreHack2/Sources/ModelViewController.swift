@@ -7,7 +7,7 @@ class ModelViewController: UICollectionViewController {
     //1
     private let cellId = "cellId"
     //1
-    
+
     init(car: Generation) {
         self.car = car
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -17,12 +17,12 @@ class ModelViewController: UICollectionViewController {
     required init?(coder decoder: NSCoder) {
         fatalError()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = .white
         self.collectionView?.alwaysBounceVertical = true
-        self.collectionView?.register(ModelView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: String(describing: ModelView.self))
+        self.collectionView?.register(ModelView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: ModelView.self))
         //3
         self.collectionView?.register(SreenshotCell2.self, forCellWithReuseIdentifier: cellId)
         //3
