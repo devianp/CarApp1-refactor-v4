@@ -32,7 +32,21 @@ extension GenerationsViewController { // UIViewController
         self.tableView.register(CarouselViewCell.self, forHeaderFooterViewReuseIdentifier: "CarouselViewCell")
         self.tableView.register(DefaultTableViewCell.self, forCellReuseIdentifier: "DefaultTableViewCell")
 
-        self.generations = Generation.generations
+        let backgroundView = TableViewBackgroundView(frame: .zero)
+        self.tableView.backgroundView = backgroundView
+
+        backgroundView.state = .loading
+        DataStore.shared.generations { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let generations):
+                    backgroundView.state = generations.isEmpty ? .empty("Empty") : .loaded
+                    self?.generations = generations
+                case .failure(let error):
+                    backgroundView.state = .error(error)
+                }
+            }
+        }
     }
 }
 
