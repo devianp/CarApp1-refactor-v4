@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class ModelHeaderView: UICollectionReusableView {
+final class ModelHeaderView: UIView {
 
     var generation: Generation? {
         didSet {
@@ -33,13 +33,15 @@ final class ModelHeaderView: UICollectionReusableView {
         NSLayoutConstraint.activate([
 
             self.imageView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.imageView.heightAnchor.constraint(equalToConstant: 150.0),
             self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.imageView.heightAnchor.constraint(equalToConstant: 150.0),
 
             self.nameLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 8.0),
             self.nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15.0),
             self.nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15.0),
+
+            self.bottomAnchor.constraint(equalTo: self.nameLabel.bottomAnchor),
             ])
     }
 

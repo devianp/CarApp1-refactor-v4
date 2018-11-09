@@ -22,6 +22,21 @@ extension ModelViewController {
         super.viewDidLoad()
         
         self.tableView.register(DefaultTableViewCell.self, forCellReuseIdentifier: "DefaultTableViewCell")
+
+        let headerView = ModelHeaderView(frame: .zero)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.generation = self.generation
+
+        self.tableView.tableHeaderView = headerView
+
+        NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: self.tableView.topAnchor),
+            headerView.widthAnchor.constraint(equalTo: self.tableView.widthAnchor),
+            headerView.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor),
+            ])
+
+        headerView.layoutIfNeeded()
+        self.tableView.tableHeaderView = headerView
     }
 }
 
